@@ -102,7 +102,14 @@ public:
     status_t            writeStrongBinder(const sp<IBinder>& val);
     status_t            writeWeakBinder(const wp<IBinder>& val);
     status_t            writeInt32Array(size_t len, const int32_t *val);
+<<<<<<< HEAD
     status_t            write(const Flattenable& val);
+=======
+    status_t            writeByteArray(size_t len, const uint8_t *val);
+
+    template<typename T>
+    status_t            write(const Flattenable<T>& val);
+>>>>>>> f4ba36aa9910b5f1525810f00f65fc309b990cde
 
     template<typename T>
     status_t            write(const LightFlattenable<T>& val);
